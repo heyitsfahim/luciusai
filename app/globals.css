@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-teal: #00B09B;
+    --brand-teal-light: #00C4AD;
+    --brand-green: #0FAF62;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-brand {
+    color: var(--brand-teal);
+  }
+
+  .bg-brand {
+    background-color: var(--brand-teal);
+  }
+
+  .border-brand {
+    border-color: var(--brand-teal);
+  }
+
+  .ring-score {
+    --score-color: var(--brand-teal);
+  }
+}
+
+/* Relationship score ring animation */
+@keyframes score-fill {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: var(--offset); }
+}
+
+.score-ring circle {
+  animation: score-fill 0.8s ease-out forwards;
+  stroke: var(--brand-teal);
+}
+
+/* Stage badge colours */
+.badge-seed      { @apply bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300; }
+.badge-pre-seed  { @apply bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300; }
+.badge-post-seed { @apply bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300; }
+.badge-series-a  { @apply bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300; }
+.badge-early     { @apply bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300; }
+.badge-growth    { @apply bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-300; }
+.badge-late      { @apply bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300; }
