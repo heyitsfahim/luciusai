@@ -41,35 +41,37 @@ export default function ShopPage() {
   }, {} as Record<string, Product[]>)
 
   const allDomains = ['All', ...DOMAIN_ORDER.filter(d => productsByDomain[d])]
-
   const filteredDomains = activeFilter === 'All'
     ? Object.keys(productsByDomain)
     : [activeFilter].filter(d => productsByDomain[d])
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen text-white" style={{ backgroundColor: '#3d3d3d' }}>
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#0a0a0a]/95 backdrop-blur border-b border-white/10">
+      <header className="sticky top-0 z-50 backdrop-blur border-b border-white/10" style={{ backgroundColor: 'rgba(51,51,51,0.97)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-black text-black text-sm">L</div>
-              <span className="font-bold text-lg tracking-tight">Lucius</span>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-sm" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
+              <span className="font-bold text-lg tracking-tight text-white">Lucius</span>
             </div>
-            <nav className="hidden md:flex items-center gap-6 text-sm text-white/60">
+            <nav className="hidden md:flex items-center gap-6 text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
               <a href="#products" className="hover:text-white transition-colors">Products</a>
               <Link href="/portal/login" className="hover:text-white transition-colors">My Courses</Link>
             </nav>
             <button
               onClick={() => setCartOpen(true)}
-              className="relative flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-black font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+              className="relative flex items-center gap-2 font-semibold text-sm px-4 py-2 rounded-lg transition-colors text-[#333]"
+              style={{ backgroundColor: '#F5C200' }}
+              onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#F7D040')}
+              onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#F5C200')}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
               Cart
               {cartCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-1.5 -right-1.5 bg-[#2878B5] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                   {cartCount}
                 </span>
               )}
@@ -79,22 +81,24 @@ export default function ShopPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-400/5 via-transparent to-orange-500/5" />
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #333333 0%, #3d3d3d 50%, #404040 100%)' }}>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at top right, rgba(245,194,0,0.08) 0%, transparent 60%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at bottom left, rgba(40,120,181,0.06) 0%, transparent 60%)' }} />
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider border" style={{ backgroundColor: 'rgba(245,194,0,0.12)', borderColor: 'rgba(245,194,0,0.3)', color: '#F5C200' }}>
             Books · Courses · Digital Tools
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-white">
             Knowledge that moves<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Bangladesh forward</span>
+            <span style={{ color: '#F5C200' }}>Bangladesh forward</span>
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.65)' }}>
             Business books, video courses, digital toolkits, and one-on-one coaching—built for Bangladeshi founders, brands, and professionals.
           </p>
           <a
             href="#products"
-            className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-black font-bold px-8 py-3.5 rounded-xl transition-colors text-sm"
+            className="inline-flex items-center gap-2 font-bold px-8 py-3.5 rounded-xl transition-colors text-sm"
+            style={{ backgroundColor: '#F5C200', color: '#333333' }}
           >
             Browse Products
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,18 +109,18 @@ export default function ShopPage() {
       </section>
 
       {/* Domain Filter */}
-      <section className="sticky top-16 z-40 bg-[#0a0a0a]/95 backdrop-blur border-b border-white/10" id="products">
+      <section className="sticky top-16 z-40 backdrop-blur border-b border-white/10" id="products" style={{ backgroundColor: 'rgba(51,51,51,0.97)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-2 py-3 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-2 py-3 overflow-x-auto">
             {allDomains.map(domain => (
               <button
                 key={domain}
                 onClick={() => setActiveFilter(domain)}
-                className={`flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap ${
-                  activeFilter === domain
-                    ? 'bg-amber-400 text-black'
-                    : 'bg-white/5 text-white/50 hover:text-white hover:bg-white/10'
-                }`}
+                className="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all whitespace-nowrap"
+                style={activeFilter === domain
+                  ? { backgroundColor: '#F5C200', color: '#333333' }
+                  : { backgroundColor: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.55)' }
+                }
               >
                 {domain}
               </button>
@@ -129,7 +133,7 @@ export default function ShopPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {loading ? (
           <div className="flex items-center justify-center py-24">
-            <div className="w-8 h-8 border-2 border-amber-400 border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-2 border-t-transparent rounded-full animate-spin" style={{ borderColor: '#F5C200', borderTopColor: 'transparent' }} />
           </div>
         ) : (
           <div className="space-y-16">
@@ -148,10 +152,10 @@ export default function ShopPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 mt-20 py-8 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-sm">
+      <footer className="border-t border-white/10 mt-20 py-8 px-4" style={{ backgroundColor: '#333333' }}>
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-black text-black text-xs">L</div>
+            <div className="w-6 h-6 rounded flex items-center justify-center font-black text-white text-xs" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
             <span>Lucius © {new Date().getFullYear()}</span>
           </div>
           <div className="flex gap-6">
@@ -184,9 +188,10 @@ function DomainSection({ domain, products, cart, onAddToCart, onRemoveFromCart }
   return (
     <section>
       <div className="flex items-center gap-4 mb-6">
-        <h2 className="text-xl font-bold tracking-tight">{domain}</h2>
-        <div className="flex-1 h-px bg-white/10" />
-        <span className="text-white/30 text-xs font-medium">{products.length} items</span>
+        <div className="w-1 h-6 rounded-full" style={{ backgroundColor: '#F5C200' }} />
+        <h2 className="text-xl font-bold tracking-tight text-white">{domain}</h2>
+        <div className="flex-1 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.1)' }} />
+        <span className="text-xs font-medium" style={{ color: 'rgba(255,255,255,0.3)' }}>{products.length} items</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {products.map(product => (
@@ -210,10 +215,13 @@ function ProductCard({ product, inCart, onAdd, onRemove }: {
   onRemove: () => void
 }) {
   const icon = ITEM_TYPE_ICONS[product.item_type] || '📦'
-  const colorClass = ITEM_TYPE_COLORS[product.item_type] || 'bg-gray-100 text-gray-800'
+  const colorClass = ITEM_TYPE_COLORS[product.item_type] || 'bg-white/10 text-white/60 border border-white/20'
 
   return (
-    <div className="group bg-white/5 hover:bg-white/8 border border-white/10 hover:border-white/20 rounded-2xl p-5 flex flex-col gap-4 transition-all duration-200">
+    <div
+      className="group flex flex-col gap-4 rounded-2xl p-5 transition-all duration-200 border"
+      style={{ backgroundColor: 'rgba(255,255,255,0.06)', borderColor: inCart ? '#F5C200' : 'rgba(255,255,255,0.1)' }}
+    >
       {/* Type badge */}
       <div className="flex items-start justify-between gap-2">
         <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2 py-1 rounded-lg ${colorClass}`}>
@@ -221,14 +229,14 @@ function ProductCard({ product, inCart, onAdd, onRemove }: {
           {product.item_type}
         </span>
         {product.is_free && (
-          <span className="bg-green-400/10 text-green-400 text-xs font-bold px-2 py-1 rounded-lg border border-green-400/20">
+          <span className="text-xs font-bold px-2 py-1 rounded-lg border" style={{ backgroundColor: 'rgba(40,120,181,0.12)', color: '#5BA3D9', borderColor: 'rgba(40,120,181,0.3)' }}>
             FREE
           </span>
         )}
       </div>
 
       {/* Name */}
-      <h3 className="font-semibold text-sm leading-snug text-white/90 flex-1">
+      <h3 className="font-semibold text-sm leading-snug flex-1" style={{ color: 'rgba(255,255,255,0.9)' }}>
         {product.name}
       </h3>
 
@@ -236,15 +244,16 @@ function ProductCard({ product, inCart, onAdd, onRemove }: {
       <div className="flex items-center justify-between gap-3 mt-auto">
         <div className="font-black text-lg">
           {product.is_free ? (
-            <span className="text-green-400">FREE</span>
+            <span style={{ color: '#5BA3D9' }}>FREE</span>
           ) : (
-            <span className="text-amber-400">{formatBDT(product.price_bdt)}</span>
+            <span style={{ color: '#F5C200' }}>{formatBDT(product.price_bdt)}</span>
           )}
         </div>
         {inCart ? (
           <button
             onClick={onRemove}
-            className="flex items-center gap-1.5 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
+            style={{ backgroundColor: 'rgba(217,120,40,0.12)', border: '1px solid rgba(217,120,40,0.35)', color: '#E89040' }}
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -254,7 +263,8 @@ function ProductCard({ product, inCart, onAdd, onRemove }: {
         ) : (
           <button
             onClick={onAdd}
-            className="flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-black text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
+            className="flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg transition-colors"
+            style={{ backgroundColor: '#F5C200', color: '#333333' }}
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -276,11 +286,11 @@ function CartSidebar({ cart, total, onRemove, onClose }: {
   return (
     <>
       <div className="fixed inset-0 bg-black/60 z-50" onClick={onClose} />
-      <div className="fixed right-0 top-0 bottom-0 w-full max-w-md bg-[#111] border-l border-white/10 z-50 flex flex-col">
+      <div className="fixed right-0 top-0 bottom-0 w-full max-w-md z-50 flex flex-col border-l border-white/10" style={{ backgroundColor: '#333333' }}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10">
-          <h2 className="font-bold text-lg">Your Cart ({cart.length})</h2>
-          <button onClick={onClose} className="text-white/40 hover:text-white transition-colors">
+          <h2 className="font-bold text-lg text-white">Your Cart ({cart.length})</h2>
+          <button onClick={onClose} className="transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -290,7 +300,7 @@ function CartSidebar({ cart, total, onRemove, onClose }: {
         {/* Items */}
         <div className="flex-1 overflow-y-auto p-4 space-y-3">
           {cart.length === 0 ? (
-            <div className="flex flex-col items-center justify-center h-full text-white/40 gap-3">
+            <div className="flex flex-col items-center justify-center h-full gap-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
               <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
@@ -298,19 +308,16 @@ function CartSidebar({ cart, total, onRemove, onClose }: {
             </div>
           ) : (
             cart.map(item => (
-              <div key={item.product.id} className="flex gap-3 bg-white/5 rounded-xl p-3">
+              <div key={item.product.id} className="flex gap-3 rounded-xl p-3 border border-white/10" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-white/90 leading-snug line-clamp-2">{item.product.name}</p>
-                  <p className="text-xs text-white/40 mt-1">{item.product.item_type}</p>
+                  <p className="text-sm font-medium leading-snug line-clamp-2" style={{ color: 'rgba(255,255,255,0.9)' }}>{item.product.name}</p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>{item.product.item_type}</p>
                 </div>
                 <div className="flex flex-col items-end justify-between gap-2 flex-shrink-0">
-                  <span className="font-bold text-amber-400 text-sm">
+                  <span className="font-bold text-sm" style={{ color: '#F5C200' }}>
                     {item.product.is_free ? 'FREE' : formatBDT(item.product.price_bdt)}
                   </span>
-                  <button
-                    onClick={() => onRemove(item.product.id)}
-                    className="text-white/30 hover:text-red-400 transition-colors"
-                  >
+                  <button onClick={() => onRemove(item.product.id)} style={{ color: 'rgba(255,255,255,0.3)' }}>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                     </svg>
@@ -325,16 +332,17 @@ function CartSidebar({ cart, total, onRemove, onClose }: {
         {cart.length > 0 && (
           <div className="p-6 border-t border-white/10 space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-white/60">Total</span>
-              <span className="font-black text-xl text-amber-400">{formatBDT(total)}</span>
+              <span className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>Total</span>
+              <span className="font-black text-xl" style={{ color: '#F5C200' }}>{formatBDT(total)}</span>
             </div>
             <Link
               href={`/shop/checkout?items=${encodeURIComponent(JSON.stringify(cart.map(i => ({ product_id: i.product.id, quantity: i.quantity }))))}`}
-              className="block w-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-center py-3.5 rounded-xl transition-colors"
+              className="block w-full font-bold text-center py-3.5 rounded-xl transition-colors text-sm"
+              style={{ backgroundColor: '#F5C200', color: '#333333' }}
             >
               Proceed to Checkout →
             </Link>
-            <p className="text-center text-white/30 text-xs">
+            <p className="text-center text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
               Payment via bKash, bank transfer, or cash
             </p>
           </div>

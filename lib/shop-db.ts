@@ -23,11 +23,11 @@ export const DOMAIN_ORDER = [
 ]
 
 export const ITEM_TYPE_COLORS: Record<string, string> = {
-  'Physical Book': 'bg-amber-100 text-amber-800',
-  'Video Course': 'bg-purple-100 text-purple-800',
-  'PDF': 'bg-blue-100 text-blue-800',
-  'Digital File': 'bg-teal-100 text-teal-800',
-  'In-Person or One-on-One': 'bg-rose-100 text-rose-800',
+  'Physical Book':           'bg-[#D97828]/15 text-[#E89040] border border-[#D97828]/30',
+  'Video Course':            'bg-[#2878B5]/15 text-[#5BA3D9] border border-[#2878B5]/30',
+  'PDF':                     'bg-[#2878B5]/10 text-[#5BA3D9] border border-[#2878B5]/25',
+  'Digital File':            'bg-[#F5C200]/10 text-[#F5C200] border border-[#F5C200]/25',
+  'In-Person or One-on-One': 'bg-[#D97828]/10 text-[#E89040] border border-[#D97828]/25',
 }
 
 export const ITEM_TYPE_ICONS: Record<string, string> = {

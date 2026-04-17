@@ -3,6 +3,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+const inputClass = "w-full border rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none transition-colors text-sm"
+const inputStyle = { backgroundColor: 'rgba(255,255,255,0.07)', borderColor: 'rgba(255,255,255,0.15)' }
+
 export default function AdminLoginPage() {
   const router = useRouter()
   const [form, setForm] = useState({ email: '', password: '' })
@@ -31,49 +34,31 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center px-4">
+    <div className="min-h-screen text-white flex items-center justify-center px-4" style={{ backgroundColor: '#3d3d3d' }}>
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center font-black text-black text-xl mx-auto mb-4">L</div>
-          <h1 className="text-2xl font-black">Admin Panel</h1>
-          <p className="text-white/40 text-sm mt-1">Lucius Content Management</p>
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center font-black text-white text-xl mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
+          <h1 className="text-2xl font-black text-white">Admin Panel</h1>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Lucius Content Management</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-white/60 mb-1.5">Email</label>
-            <input
-              type="email"
-              required
-              value={form.email}
-              onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-              className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-amber-400/50 transition-colors"
-              placeholder="admin@lucius.com.bd"
-            />
+            <label className="block text-sm font-medium mb-1.5" style={{ color: 'rgba(255,255,255,0.6)' }}>Email</label>
+            <input type="email" required value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} className={inputClass} style={inputStyle} placeholder="admin@lucius.com.bd" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-white/60 mb-1.5">Password</label>
-            <input
-              type="password"
-              required
-              value={form.password}
-              onChange={e => setForm(f => ({ ...f, password: e.target.value }))}
-              className="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-amber-400/50 transition-colors"
-              placeholder="••••••••"
-            />
+            <label className="block text-sm font-medium mb-1.5" style={{ color: 'rgba(255,255,255,0.6)' }}>Password</label>
+            <input type="password" required value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} className={inputClass} style={inputStyle} placeholder="••••••••" />
           </div>
 
           {error && (
-            <div className="bg-red-500/10 border border-red-500/20 text-red-400 text-sm px-4 py-3 rounded-xl">
+            <div className="text-sm px-4 py-3 rounded-xl border" style={{ backgroundColor: 'rgba(220,50,50,0.1)', borderColor: 'rgba(220,50,50,0.25)', color: '#ff8080' }}>
               {error}
             </div>
           )}
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-black font-bold py-3 rounded-xl transition-colors"
-          >
+          <button type="submit" disabled={loading} className="w-full font-bold py-3 rounded-xl transition-colors disabled:opacity-50 text-sm" style={{ backgroundColor: '#F5C200', color: '#333333' }}>
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
