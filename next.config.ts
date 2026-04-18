@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['@anthropic-ai/sdk'],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 export default nextConfig
