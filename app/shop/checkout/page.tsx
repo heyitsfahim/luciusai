@@ -88,7 +88,7 @@ function CheckoutForm() {
         <div className="max-w-5xl mx-auto h-14 flex items-center justify-between">
           <Link href="/shop" className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg flex items-center justify-center font-black text-white text-xs" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
-            <span className="font-bold text-sm tracking-tight">Lucius</span>
+            <span className="font-bold text-sm tracking-tight">Fahim<span style={{ color: '#F5C200' }}>Salam</span></span>
           </Link>
           <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Checkout</span>
         </div>

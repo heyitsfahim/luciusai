@@ -69,7 +69,7 @@ export default function ShopPage() {
       <header className="sticky top-0 z-50 border-b" style={{ backgroundColor: 'rgba(46,46,44,0.97)', borderColor: BORDER, backdropFilter: 'blur(8px)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-[56px]">
           <a href="#" className="text-[17px] font-black tracking-tight">
-            Lucius<span style={{ color: YELLOW }}>AI</span>
+            Fahim<span style={{ color: YELLOW }}>Salam</span>
           </a>
           <button
             onClick={() => setCartOpen(true)}
@@ -112,30 +112,30 @@ export default function ShopPage() {
             <div className="relative w-[400px] h-[380px]">
               {/* Book 3 — back */}
               <div className="absolute top-6 right-0 w-[180px] h-[250px] shadow-2xl flex flex-col justify-between p-5" style={{ backgroundColor: '#F5C200', transform: 'rotate(8deg)', transformOrigin: 'bottom center' }}>
-                <div className="text-[9px] font-black tracking-[0.2em] uppercase text-black/50">Lucius AI</div>
+                <div className="text-[9px] font-black tracking-[0.2em] uppercase text-black/50">Fahim Salam</div>
                 <div>
                   <div className="text-3xl font-black leading-none text-black mb-1">#1<br />ONLINE<br />BRAND</div>
                   <div className="text-[8px] font-black tracking-widest uppercase text-black/60 mt-2">Build Bangladesh's Leading Brand</div>
                 </div>
-                <div className="text-[10px] font-black tracking-wider uppercase text-black/70">Lucius AI</div>
+                <div className="text-[10px] font-black tracking-wider uppercase text-black/70">Fahim Salam</div>
               </div>
               {/* Book 2 — middle */}
               <div className="absolute top-2 left-16 w-[180px] h-[260px] shadow-2xl flex flex-col justify-between p-5" style={{ backgroundColor: '#1a1a18', border: '1px solid rgba(255,255,255,0.15)', transform: 'rotate(-4deg)', transformOrigin: 'bottom center' }}>
-                <div className="text-[9px] font-black tracking-[0.2em] uppercase" style={{ color: MUTED }}>Lucius AI</div>
+                <div className="text-[9px] font-black tracking-[0.2em] uppercase" style={{ color: MUTED }}>Fahim Salam</div>
                 <div>
                   <div className="text-3xl font-black leading-none text-white mb-1">TALK<br />LIKE A<br /><span style={{ color: YELLOW }}>KING</span></div>
                   <div className="text-[8px] font-black tracking-widest uppercase mt-2" style={{ color: MUTED }}>Communication Masterclass</div>
                 </div>
-                <div className="text-[10px] font-black tracking-wider uppercase" style={{ color: DIM }}>Lucius AI</div>
+                <div className="text-[10px] font-black tracking-wider uppercase" style={{ color: DIM }}>Fahim Salam</div>
               </div>
               {/* Book 1 — front */}
               <div className="absolute top-0 left-0 w-[190px] h-[270px] shadow-2xl flex flex-col justify-between p-5" style={{ backgroundColor: '#f0f0ec', transform: 'rotate(-1deg)', transformOrigin: 'bottom center' }}>
-                <div className="text-[9px] font-black tracking-[0.2em] uppercase text-black/40">Lucius AI</div>
+                <div className="text-[9px] font-black tracking-[0.2em] uppercase text-black/40">Fahim Salam</div>
                 <div>
                   <div className="text-4xl font-black leading-none text-black mb-2">HARD<br /><span style={{ color: '#2a7a2a' }}>MARKETS</span></div>
                   <div className="text-[7px] font-black tracking-widest uppercase text-black/50 leading-relaxed">Notes for builders, operators &amp; investors of emerging markets</div>
                 </div>
-                <div className="text-[10px] font-black tracking-wider uppercase text-black/50">Lucius AI</div>
+                <div className="text-[10px] font-black tracking-wider uppercase text-black/50">Fahim Salam</div>
               </div>
             </div>
           </div>
@@ -260,14 +260,14 @@ export default function ShopPage() {
       {/* FOOTER */}
       <footer className="border-t py-8" style={{ backgroundColor: '#242422', borderColor: BORDER }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="font-black text-base tracking-tight">Lucius<span style={{ color: YELLOW }}>AI</span></span>
+          <span className="font-black text-base tracking-tight">Fahim<span style={{ color: YELLOW }}>Salam</span></span>
           <div className="flex gap-8 text-[10px] font-bold tracking-[0.12em] uppercase" style={{ color: MUTED }}>
             <a href="#products" className="hover:text-white transition-colors">Books</a>
             <a href="#products" className="hover:text-white transition-colors">Courses</a>
             <a href="#products" className="hover:text-white transition-colors">Kits</a>
             <Link href="/portal/login" className="hover:text-white transition-colors">My Account</Link>
           </div>
-          <span className="text-[11px]" style={{ color: DIM }}>© {new Date().getFullYear()} Lucius AI. All rights reserved.</span>
+          <span className="text-[11px]" style={{ color: DIM }}>© {new Date().getFullYear()} Fahim Salam. All rights reserved.</span>
         </div>
       </footer>
 

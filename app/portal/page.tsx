@@ -47,7 +47,7 @@ export default function PortalPage() {
           <div className="flex items-center gap-3">
             <Link href="/shop" className="flex items-center gap-2">
               <div className="w-7 h-7 rounded-lg flex items-center justify-center font-black text-white text-xs" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
-              <span className="font-bold text-sm">Lucius</span>
+              <span className="font-bold text-sm">Fahim<span style={{ color: '#F5C200' }}>Salam</span></span>
             </Link>
             <span style={{ color: 'rgba(255,255,255,0.2)' }}>/</span>
             <span className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>My Library</span>

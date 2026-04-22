@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
         <div className="text-center mb-8">
           <div className="w-12 h-12 rounded-xl flex items-center justify-center font-black text-white text-xl mx-auto mb-4" style={{ background: 'linear-gradient(135deg, #F5C200, #D97828)' }}>L</div>
           <h1 className="text-2xl font-black text-white">Admin Panel</h1>
-          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Lucius Content Management</p>
+          <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Fahim Salam</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
