@@ -132,7 +132,7 @@ export default function ShopPage() {
           </div>
 
           {/* Right column — book stack */}
-          <div className="hidden lg:flex items-center justify-center py-10 pl-8">
+          <div className="flex items-center justify-center py-10 lg:pl-8">
             <div className="relative" style={{ width: 460, height: 460 }}>
 
               {/* Book 3 — back right: #1 Online Brand */}
