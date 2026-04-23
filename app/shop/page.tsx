@@ -136,72 +136,30 @@ export default function ShopPage() {
             <div className="relative" style={{ width: 460, height: 460 }}>
 
               {/* Book 3 — back right: #1 Online Brand */}
-              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+              <div className="absolute shadow-2xl overflow-hidden" style={{
                 width: 210, height: 300, right: 0, top: 30,
-                backgroundColor: '#ffffff',
                 transform: 'rotate(9deg)',
                 transformOrigin: 'bottom center',
               }}>
-                <div style={{ backgroundColor: '#e8e8e4', padding: '8px 12px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.08em', color: '#333', textTransform: 'uppercase', lineHeight: 1.5 }}>From the author of &ldquo;Hard Markets&rdquo;!</div>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center px-4 py-3">
-                  <div style={{
-                    backgroundColor: '#F5C200',
-                    padding: '10px 14px',
-                    width: '100%',
-                    boxShadow: '4px 4px 0 rgba(0,0,0,0.15)',
-                  }}>
-                    <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.06em', color: '#1a1a18', textTransform: 'uppercase', marginBottom: 2 }}>How to build Bangladesh&apos;s</div>
-                    <div style={{ fontSize: 32, fontWeight: 900, color: '#1a1a18', lineHeight: 0.9, textTransform: 'uppercase' }}>#1<br />ONLINE<br />BRAND</div>
-                  </div>
-                  <div style={{ fontSize: 6.5, fontWeight: 700, color: '#555', textAlign: 'center', marginTop: 8, letterSpacing: '0.04em', lineHeight: 1.5, textTransform: 'uppercase' }}>Tested strategies, killer products,<br />high margins, no excuses.</div>
-                </div>
-                <div style={{ padding: '6px 12px 10px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.12em', color: '#1a1a18', textTransform: 'uppercase' }}>Fahim Salam</div>
-                </div>
+                <img src="/online-brand.jpg" alt="#1 Online Brand" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
 
               {/* Book 2 — middle: Talk Like A King */}
-              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+              <div className="absolute shadow-2xl overflow-hidden" style={{
                 width: 215, height: 310, left: 85, top: 15,
-                backgroundColor: '#ffffff',
                 transform: 'rotate(-5deg)',
                 transformOrigin: 'bottom center',
               }}>
-                <div className="flex flex-col items-center justify-between h-full px-4 py-4">
-                  <div style={{ fontSize: 9, fontWeight: 900, letterSpacing: '0.22em', color: '#C9A227', textTransform: 'uppercase', textAlign: 'center' }}>F A H I M &nbsp; S A L A M</div>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: 52, fontWeight: 900, color: '#111', lineHeight: 0.88, letterSpacing: '-0.02em' }}>TALK</div>
-                    <div style={{ fontSize: 22, fontWeight: 400, color: '#111', letterSpacing: '0.28em', margin: '4px 0', textTransform: 'uppercase' }}>LIKE A</div>
-                    <div style={{ fontSize: 52, fontWeight: 900, color: '#C9A227', lineHeight: 0.88, letterSpacing: '-0.02em' }}>KING</div>
-                    <div style={{ fontSize: 22, textAlign: 'center', marginTop: 2 }}>♛</div>
-                  </div>
-                  <div style={{ fontSize: 6.5, fontWeight: 600, color: '#555', textAlign: 'center', letterSpacing: '0.04em', lineHeight: 1.6, textTransform: 'uppercase' }}>The get-shit-done communication<br />guidebook for entrepreneurs &amp;<br />career builders!</div>
-                </div>
+                <img src="/talk-like-a-king.jpg" alt="Talk Like A King" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
 
               {/* Book 1 — front: Hard Markets */}
-              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+              <div className="absolute shadow-2xl overflow-hidden" style={{
                 width: 220, height: 320, left: 0, top: 0,
-                backgroundColor: '#ffffff',
                 transform: 'rotate(-1deg)',
                 transformOrigin: 'bottom center',
               }}>
-                <div style={{ backgroundColor: '#e8e8e4', padding: '8px 12px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.08em', color: '#333', textTransform: 'uppercase', lineHeight: 1.5 }}>With unfiltered insights<br />from real entrepreneurs</div>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-between px-3 py-3">
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: 54, fontWeight: 900, color: '#2a7a2a', lineHeight: 0.9, letterSpacing: '-0.02em' }}>HARD</div>
-                    <div style={{ fontSize: 38, fontWeight: 900, color: '#111', lineHeight: 0.9, letterSpacing: '-0.02em' }}>MARKETS</div>
-                  </div>
-                  <div style={{ fontSize: 34, textAlign: 'center', margin: '4px 0' }}>🛺</div>
-                  <div style={{ fontSize: 6.5, fontWeight: 700, color: '#444', textAlign: 'center', letterSpacing: '0.05em', lineHeight: 1.6, textTransform: 'uppercase' }}>Notes for builders, operators &amp; investors<br />of emerging markets like Bangladesh</div>
-                </div>
-                <div style={{ padding: '6px 12px 12px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 13, fontWeight: 900, letterSpacing: '0.1em', color: '#555', textTransform: 'uppercase' }}>Fahim Salam</div>
-                </div>
+                <img src="/hard-markets.jpg" alt="Hard Markets" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
 
             </div>
