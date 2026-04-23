@@ -133,56 +133,77 @@ export default function ShopPage() {
 
           {/* Right column — book stack */}
           <div className="hidden lg:flex items-center justify-center py-10 pl-8">
-            <div className="relative" style={{ width: 420, height: 400 }}>
-              {/* Book 3 — back right, yellow */}
-              <div className="absolute shadow-2xl flex flex-col justify-between" style={{
-                width: 185, height: 255, right: 0, top: 20,
-                backgroundColor: '#F5C200',
+            <div className="relative" style={{ width: 460, height: 460 }}>
+
+              {/* Book 3 — back right: #1 Online Brand */}
+              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+                width: 210, height: 300, right: 0, top: 30,
+                backgroundColor: '#ffffff',
                 transform: 'rotate(9deg)',
                 transformOrigin: 'bottom center',
-                padding: '18px 16px',
               }}>
-                <div style={{ fontSize: 8, fontWeight: 900, letterSpacing: '0.2em', color: 'rgba(0,0,0,0.4)', textTransform: 'uppercase' }}>Fahim Salam</div>
-                <div>
-                  <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: '0.15em', color: 'rgba(0,0,0,0.5)', textTransform: 'uppercase', marginBottom: 6 }}>Build Bangladesh&apos;s</div>
-                  <div className="serif font-black leading-none" style={{ fontSize: 36, color: '#1a1a18' }}>#1<br />ONLINE<br />BRAND</div>
+                <div style={{ backgroundColor: '#e8e8e4', padding: '8px 12px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.08em', color: '#333', textTransform: 'uppercase', lineHeight: 1.5 }}>From the author of &ldquo;Hard Markets&rdquo;!</div>
                 </div>
-                <div style={{ fontSize: 9, fontWeight: 900, letterSpacing: '0.15em', color: 'rgba(0,0,0,0.5)', textTransform: 'uppercase' }}>Fahim Salam</div>
+                <div className="flex-1 flex flex-col items-center justify-center px-4 py-3">
+                  <div style={{
+                    backgroundColor: '#F5C200',
+                    padding: '10px 14px',
+                    width: '100%',
+                    boxShadow: '4px 4px 0 rgba(0,0,0,0.15)',
+                  }}>
+                    <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.06em', color: '#1a1a18', textTransform: 'uppercase', marginBottom: 2 }}>How to build Bangladesh&apos;s</div>
+                    <div style={{ fontSize: 32, fontWeight: 900, color: '#1a1a18', lineHeight: 0.9, textTransform: 'uppercase' }}>#1<br />ONLINE<br />BRAND</div>
+                  </div>
+                  <div style={{ fontSize: 6.5, fontWeight: 700, color: '#555', textAlign: 'center', marginTop: 8, letterSpacing: '0.04em', lineHeight: 1.5, textTransform: 'uppercase' }}>Tested strategies, killer products,<br />high margins, no excuses.</div>
+                </div>
+                <div style={{ padding: '6px 12px 10px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.12em', color: '#1a1a18', textTransform: 'uppercase' }}>Fahim Salam</div>
+                </div>
               </div>
 
-              {/* Book 2 — middle dark */}
-              <div className="absolute shadow-2xl flex flex-col justify-between" style={{
-                width: 185, height: 265, left: 80, top: 8,
-                backgroundColor: '#1e1e1c',
-                border: '1px solid rgba(255,255,255,0.12)',
+              {/* Book 2 — middle: Talk Like A King */}
+              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+                width: 215, height: 310, left: 85, top: 15,
+                backgroundColor: '#ffffff',
                 transform: 'rotate(-5deg)',
                 transformOrigin: 'bottom center',
-                padding: '18px 16px',
               }}>
-                <div style={{ fontSize: 8, fontWeight: 900, letterSpacing: '0.2em', color: MUTED, textTransform: 'uppercase' }}>Fahim Salam</div>
-                <div>
-                  <div className="serif font-black leading-[0.95]" style={{ fontSize: 38, color: '#fff' }}>TALK<br />LIKE A</div>
-                  <div className="serif font-black" style={{ fontSize: 38, color: YELLOW }}>KING</div>
-                  <div style={{ fontSize: 8, fontWeight: 900, letterSpacing: '0.12em', color: MUTED, textTransform: 'uppercase', marginTop: 8 }}>Communication Masterclass</div>
+                <div className="flex flex-col items-center justify-between h-full px-4 py-4">
+                  <div style={{ fontSize: 9, fontWeight: 900, letterSpacing: '0.22em', color: '#C9A227', textTransform: 'uppercase', textAlign: 'center' }}>F A H I M &nbsp; S A L A M</div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: 52, fontWeight: 900, color: '#111', lineHeight: 0.88, letterSpacing: '-0.02em' }}>TALK</div>
+                    <div style={{ fontSize: 22, fontWeight: 400, color: '#111', letterSpacing: '0.28em', margin: '4px 0', textTransform: 'uppercase' }}>LIKE A</div>
+                    <div style={{ fontSize: 52, fontWeight: 900, color: '#C9A227', lineHeight: 0.88, letterSpacing: '-0.02em' }}>KING</div>
+                    <div style={{ fontSize: 22, textAlign: 'center', marginTop: 2 }}>♛</div>
+                  </div>
+                  <div style={{ fontSize: 6.5, fontWeight: 600, color: '#555', textAlign: 'center', letterSpacing: '0.04em', lineHeight: 1.6, textTransform: 'uppercase' }}>The get-shit-done communication<br />guidebook for entrepreneurs &amp;<br />career builders!</div>
                 </div>
-                <div style={{ fontSize: 9, fontWeight: 900, letterSpacing: '0.15em', color: DIM, textTransform: 'uppercase' }}>Fahim Salam</div>
               </div>
 
-              {/* Book 1 — front white */}
-              <div className="absolute shadow-2xl flex flex-col justify-between" style={{
-                width: 195, height: 275, left: 0, top: 0,
-                backgroundColor: '#f2f2ee',
+              {/* Book 1 — front: Hard Markets */}
+              <div className="absolute shadow-2xl overflow-hidden flex flex-col" style={{
+                width: 220, height: 320, left: 0, top: 0,
+                backgroundColor: '#ffffff',
                 transform: 'rotate(-1deg)',
                 transformOrigin: 'bottom center',
-                padding: '18px 16px',
               }}>
-                <div style={{ fontSize: 8, fontWeight: 900, letterSpacing: '0.15em', color: 'rgba(0,0,0,0.35)', textTransform: 'uppercase' }}>With unfiltered insights<br />from real entrepreneurs</div>
-                <div>
-                  <div className="serif font-black leading-[0.9]" style={{ fontSize: 44, color: '#2a7a2a' }}>HARD<br />MARKETS</div>
-                  <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.1em', color: 'rgba(0,0,0,0.4)', textTransform: 'uppercase', marginTop: 10, lineHeight: 1.6 }}>Notes for builders, operators &amp; investors<br />of emerging markets like Bangladesh</div>
+                <div style={{ backgroundColor: '#e8e8e4', padding: '8px 12px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 7, fontWeight: 900, letterSpacing: '0.08em', color: '#333', textTransform: 'uppercase', lineHeight: 1.5 }}>With unfiltered insights<br />from real entrepreneurs</div>
                 </div>
-                <div style={{ fontSize: 10, fontWeight: 900, letterSpacing: '0.15em', color: 'rgba(0,0,0,0.5)', textTransform: 'uppercase' }}>Fahim Salam</div>
+                <div className="flex-1 flex flex-col items-center justify-between px-3 py-3">
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: 54, fontWeight: 900, color: '#2a7a2a', lineHeight: 0.9, letterSpacing: '-0.02em' }}>HARD</div>
+                    <div style={{ fontSize: 38, fontWeight: 900, color: '#111', lineHeight: 0.9, letterSpacing: '-0.02em' }}>MARKETS</div>
+                  </div>
+                  <div style={{ fontSize: 34, textAlign: 'center', margin: '4px 0' }}>🛺</div>
+                  <div style={{ fontSize: 6.5, fontWeight: 700, color: '#444', textAlign: 'center', letterSpacing: '0.05em', lineHeight: 1.6, textTransform: 'uppercase' }}>Notes for builders, operators &amp; investors<br />of emerging markets like Bangladesh</div>
+                </div>
+                <div style={{ padding: '6px 12px 12px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 13, fontWeight: 900, letterSpacing: '0.1em', color: '#555', textTransform: 'uppercase' }}>Fahim Salam</div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
